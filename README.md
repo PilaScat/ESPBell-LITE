@@ -254,36 +254,38 @@ condition: []
 action:
   - service: notify.mobile_app_doogee_v20pro
     data:
-      message: Someone at the door
-      data:
-        persistent: true
-        importance: high
-        channel: intercom
-        tag: intercom
-        image: /media/local/notify/doorbell.jpg
-        actions:
-          - action: intercom_ignore
-            title: Ignore ✖
-          - action: intercom_open
-            title: Open The Door 🔓
+      persistent: true
+      importance: high
+      channel: intercom
+      tag: intercom
+      #If you want the snapshot of a camera use this
+      image: /api/camera_proxy/camera.name
+      #If you want a generic image use this
+      image: /media/local/notify/doorbell.jpg
+      actions:
+        - action: intercom_ignore
+          title: Ignore ✖
+        - action: intercom_open
+          title: Open The Door 🔓
       title: DoorBell 🔔
-      message: Quelqu'un à la porte
+      message: Someone at the door
   - service: notify.mobile_app_Second_Phone
     data:
-      message: Someone at the door
-      data:
-        persistent: true
-        importance: high
-        channel: intercom
-        tag: intercom
-        image: /media/local/notify/doorbell.jpg
-        actions:
-          - action: intercom_ignore
-            title: Ignore ✖
-          - action: intercom_open
-            title: Open The Door 🔓
+      persistent: true
+      importance: high
+      channel: intercom
+      tag: intercom
+      #If you want the snapshot of a camera use this
+      image: /api/camera_proxy/camera.name
+      #If you want a generic image use this
+      image: /media/local/notify/doorbell.jpg
+      actions:
+        - action: intercom_ignore
+          title: Ignore ✖
+        - action: intercom_open
+          title: Open The Door 🔓
       title: DoorBell 🔔
-      message: Quelqu'un à la porte
+      message: Someone at the door
 mode: single
 
 ```
